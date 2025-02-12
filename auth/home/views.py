@@ -14,3 +14,6 @@ class StudentApi(APIView):
                 "data": serializer.data
             }
         )
+
+class LoginAPI(APIView):
+    def post(self, request):
