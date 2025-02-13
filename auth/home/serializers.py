@@ -11,3 +11,7 @@ class StudentSerializer(serializers.ModelSerializer):
 class LoginSerializer(serializers.ModelSerializer):
     username = serializers.CharField()
     password = serializers.CharField()
+
+    class Meta:
+        model = Student
+        fields = ['username', 'password']

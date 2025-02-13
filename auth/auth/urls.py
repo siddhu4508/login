@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from home.views import StudentApi
+from home.views import StudentApi, LoginAPI
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/students/', StudentApi.as_view()),  # Endpoint for student data
+    path('api/students/', StudentApi.as_view()), 
+    path('login/', LoginAPI.as_view()) # Endpoint for student data
 ]
